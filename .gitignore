@@ -184,5 +184,3 @@ next-env.d.ts
 # custom
 09_bookshelf_frontend_end
 
-07_mongodb
-.env
