@@ -1,6 +1,6 @@
-import { useEffect, useContext, createContext, useReducer } from "react";
+import { useEffect, useContext, createContext, useReducer } from 'react';
 
-import bookApi from "../api/book";
+import bookApi from '../api/book';
 
 // 本の追加・更新・削除・初期化のコンテキスト
 const BookContext = createContext();
@@ -12,16 +12,16 @@ const useDispatchBooks = () => useContext(BookDispatchContext);
 
 const reducer = (books, action) => {
   switch (action.type) {
-    case "book/init":
+    case 'book/init':
       return action.books;
 
-    case "book/add":
+    case 'book/add':
       return [action.book, ...books];
 
-    case "book/delete":
+    case 'book/delete':
       return books.filter((_book) => _book._id !== action.book._id);
 
-    case "book/update":
+    case 'book/update':
       const updatedBooks = books.filter(
         (_book) => _book._id !== action.book._id
       );
@@ -39,7 +39,7 @@ const BookProvider = ({ children }) => {
   // 初期化
   useEffect(() => {
     bookApi.getAll().then((_books) => {
-      dispatch({ type: "book/init", books: _books });
+      dispatch({ type: 'book/init', books: _books });
     });
   }, []);
 

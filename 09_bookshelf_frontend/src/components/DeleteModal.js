@@ -1,25 +1,28 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
-import { useDispatchBooks } from "../contexts/BookContext";
-import bookApi from "../api/book";
-import Button from "./Button";
-import { useState } from "react";
+import { useDispatchBooks } from '../contexts/BookContext';
+import bookApi from '../api/book';
+import Button from './Button';
+import { useState } from 'react';
 
 const DeleteModal = ({ book, toggleDeleteModal }) => {
-  const [ error, setError ] = useState("");
+  const [error, setError] = useState('');
   const navigate = useNavigate();
 
   const dispatch = useDispatchBooks();
 
   const onClickDelete = () => {
-    bookApi.delete(book).then(() => {
-      dispatch({ type: "book/delete", book });
-      toggleDeleteModal();
-      navigate('/books');
-    }).catch((e) => {
-      console.log('error occured!', e)
-      setError(e);
-    });
+    bookApi
+      .delete(book)
+      .then(() => {
+        dispatch({ type: 'book/delete', book });
+        toggleDeleteModal();
+        navigate('/books');
+      })
+      .catch((e) => {
+        console.log('error occured!', e);
+        setError(e);
+      });
   };
 
   return (
@@ -30,16 +33,10 @@ const DeleteModal = ({ book, toggleDeleteModal }) => {
         </h3>
         <div className="error-msg text-center">{error}</div>
         <div className="footer">
-          <Button
-            className="gray mr-16"
-            onClick={toggleDeleteModal}
-          >
+          <Button className="gray mr-16" onClick={toggleDeleteModal}>
             キャンセル
           </Button>
-          <Button
-            className="red"
-            onClick={onClickDelete}
-          >
+          <Button className="red" onClick={onClickDelete}>
             削除
           </Button>
         </div>
