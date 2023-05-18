@@ -11,7 +11,7 @@ const bookSchema = Schema(
       enum: [1, 2, 3, 4, 5],
       required: true,
       get: function (val) {
-        return Math.round(val);
+        return Math.round(val); // 少数を整数に変換
       },
       set: function (val) {
         return Math.round(val);

@@ -79,7 +79,7 @@
   },
   "scripts": {
     "start": "node server/app.mjs",
-    "dev": "npx concurrently \"npm:dev:api\" \"npm:dev:client\"",
+    "dev": "concurrently \"npm:dev:api\" \"npm:dev:client\"",
     "dev2": "run-p dev:*",
     "dev:api": "nodemon server/app.mjs",
     "dev:client": "node scripts/start.js",
