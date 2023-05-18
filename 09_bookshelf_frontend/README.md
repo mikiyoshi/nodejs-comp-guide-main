@@ -111,8 +111,9 @@ npm run dev
 npm i react-router-dom react-rating react-hook-form
 ```
 ```
-npm i axios @fortawesome/react-fontawesome @fortawesome/free-solid-svg-icons
+npm i axios @fortawesome/fontawesome-svg-core @fortawesome/free-regular-svg-icons @fortawesome/free-solid-svg-icons @fortawesome/react-fontawesome
 ```
+
 
 # CORS Error - add cors
 - 2 つのサーバーを立ち上げることで、片方のサーバーに違うサーバーからのデータ読み込み、書き込みの許可がなければ CORS エラーになる
