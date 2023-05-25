@@ -12,7 +12,7 @@ app.use(express.static('public'));
 app.use(express.json());
 
 // CORS がエラーの時には ブラウザの Network > Response Headers に Access-Control-Allow-Origin 表示がない
-// import cors from 'cors';
+import cors from 'cors';
 // app.use(
 //   cors({
 //     // origin: 'http://localhost:3000', // ブラウザの Network > Response Headers に Access-Control-Allow-Origin: http://localhost:3000 と表示される
