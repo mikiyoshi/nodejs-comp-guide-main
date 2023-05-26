@@ -1,3 +1,12 @@
+# Vercel MongoDB
+
+- MongoDB > Integrations > Actions(Edit)
+  - Add Vercel Projects
+- Vercel > `Your Peoject` > Setting > Environment Variables
+  - MONGODB_URI
+    - replace DB name from `myFirstDatabase` to `Your DB name (bookshelf)`
+
+
 # 進め方
 本セクションで、書きながら学びたい場合にはこのフォルダ（08_bookshelf_backend）を
 別名にして、新しくフォルダを作成してその中に記述してください。
