@@ -3,6 +3,7 @@ import Book from '../models/book.mjs';
 
 async function getAllBooks(req, res) {
   const books = await Book.find().sort({ updatedAt: -1 });
+  console.log('getAllBooks');
   res.json(books);
 }
 
