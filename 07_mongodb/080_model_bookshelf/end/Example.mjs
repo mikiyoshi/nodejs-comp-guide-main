@@ -17,26 +17,29 @@ Schema: 他のスキーマ
  */
 connect(process.env.MONGO_URI);
 
-const bookSchema = new Schema({
-  title: {
-    type: String,
-    required: true,
+const bookSchema = new Schema(
+  {
+    title: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    rating: {
+      type: Number,
+      enum: [1, 2, 3, 4, 5],
+      default: 3,
+      required: true,
+    },
+    comment: {
+      type: String,
+      required: true,
+    },
   },
-  description: {
-    type: String,
-    required: true,
-  },
-  rating: {
-    type: Number,
-    enum: [1, 2, 3, 4, 5],
-    default: 3,
-    required: true,
-  },
-  comment: {
-    type: String,
-    required: true,
-  },
-}, { timestamps: true });
+  { timestamps: true }
+);
 const Book = model('Book', bookSchema);
 
 const book = new Book({
@@ -57,4 +60,3 @@ async function init() {
   console.log(registerdBook._id);
   mongoose.connection.close();
 }
-
