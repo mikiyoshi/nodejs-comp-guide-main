@@ -14,6 +14,11 @@ app.use(express.json());
 // API
 app.use('/api', apiRoutes);
 
+app.get('*', (req, res) => {
+  const pathIndex = path.resolve('build', 'index.html');
+  res.sendFile(pathIndex);
+});
+
 // 上の /api につながれば、この middleware の条件は適応されない
 // 例えば
 // request.http `Send Request`
