@@ -1,3 +1,4 @@
+import path from 'path';
 import express from 'express';
 import env from 'dotenv';
 env.config();
@@ -8,7 +9,8 @@ import './helpers/db.mjs';
 const app = express();
 const port = process.env.PORT || 8080;
 
-app.use(express.static('public'));
+// app.use(express.static('public'));
+app.use(express.static('build'));
 app.use(express.json());
 
 // API
