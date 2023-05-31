@@ -1,6 +1,6 @@
 import path from 'path';
 import express from 'express';
-import env from 'dotenv';
+// import env from 'dotenv';
 // env.config();
 
 import apiRoutes from './api-routes/index.mjs';
@@ -14,7 +14,7 @@ app.use(express.static('build'));
 app.use(express.json());
 
 // CORS がエラーの時には ブラウザの Network > Response Headers に Access-Control-Allow-Origin 表示がない
-// import cors from 'cors';
+import cors from 'cors';
 // app.use(
 //   cors({
 //     // origin: 'http://localhost:3000', // ブラウザの Network > Response Headers に Access-Control-Allow-Origin: http://localhost:3000 と表示される
@@ -39,11 +39,16 @@ app.use(function (req, res) {
 });
 
 // これは helpers/helper.mjs の requestErrorHandler で err, req, res, next が発生した時に適応される
+// app.use(function (err, req, res, next) {
+//   if (res.headersSent) {
+//     return next(err); // これは通常のエラーへ
+//   }
+//   res.status(500).json({ msg: '不正なエラーが発生しました。' }); // これは特殊なエラー // 例えば try and catch は _id が存在しない _id ではなく、指定の文字数に達していない場合にエラーではなく、クラッシュしてしまうのを避ける
+// });
+
 app.use(function (err, req, res, next) {
-  if (res.headersSent) {
-    return next(err); // これは通常のエラーへ
-  }
-  res.status(500).json({ msg: '不正なエラーが発生しました。' }); // これは特殊なエラー // 例えば try and catch は _id が存在しない _id ではなく、指定の文字数に達していない場合にエラーではなく、クラッシュしてしまうのを避ける
+  console.log(err);
+  res.status(500).json({ msg: '予期せぬエラーが発生しました。' });
 });
 
 app.listen(port, () => {
