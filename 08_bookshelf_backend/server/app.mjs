@@ -4,7 +4,6 @@ import env from 'dotenv';
 env.config();
 
 import apiRoutes from './api-routes/index.mjs';
-import testRoutes from './api-routes/test.mjs';
 import './helpers/db.mjs';
 
 const app = express();
@@ -13,8 +12,6 @@ const port = process.env.PORT || 8080;
 // app.use(express.static('public'));
 app.use(express.static('build'));
 app.use(express.json());
-
-app.use('/test', testRoutes);
 
 // API
 app.use('/api', apiRoutes);
