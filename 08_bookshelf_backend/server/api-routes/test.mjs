@@ -1,8 +1,11 @@
-import * as http from 'http';
+import express from 'express';
+const router = express.Router();
 
-const server = http.createServer(function (req, res) {
-  console.log(req.url);
-  res.end('hello');
+router.get('/', async (req, res, next) => {
+  return res.status(200).json({
+    title: 'Express Testing',
+    message: 'The app is working properly!',
+  });
 });
 
-server.listen(8080);
+export default router;
