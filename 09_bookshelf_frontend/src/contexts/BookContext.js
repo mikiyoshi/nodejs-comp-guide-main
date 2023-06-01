@@ -12,24 +12,25 @@ const useDispatchBooks = () => useContext(BookDispatchContext);
 
 const reducer = (books, action) => {
   switch (action.type) {
-    case 'book/init':
+    case 'book/init': {
       return action.books;
-
-    case 'book/add':
+    }
+    case 'book/add': {
       return [action.book, ...books];
-
-    case 'book/delete':
+    }
+    case 'book/delete': {
       return books.filter((_book) => _book._id !== action.book._id);
-
-    case 'book/update':
+    }
+    case 'book/update': {
       const updatedBooks = books.filter(
         (_book) => _book._id !== action.book._id
       );
       updatedBooks.unshift(action.book);
       return updatedBooks;
-
-    default:
+    }
+    default: {
       return books;
+    }
   }
 };
 
