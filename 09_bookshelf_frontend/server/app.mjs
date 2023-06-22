@@ -1,7 +1,7 @@
 import path from 'path';
 import express from 'express';
-// import env from 'dotenv';
-// env.config();
+import env from 'dotenv';
+env.config();
 
 import apiRoutes from './api-routes/index.mjs';
 import './helpers/db.mjs';
