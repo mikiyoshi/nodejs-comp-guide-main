@@ -1,0 +1,179 @@
+# 拡張機能 Rest Client の利用
+# REST APIのリクエストを送信するためのツール
+# 
+# 使い方
+# 1. 拡張機能 Rest Client(humao.rest-client) をインストール
+# 2. 下記の各リクエストの上に表示される Send Request を押すとリクエストが送信される
+# 
+# 参考
+# https://github.com/Huachao/vscode-restclient
+
+### without REST API
+GET http://localhost:9001/products
+
+### without REST API 
+POST http://localhost:9001/create-product
+content-type: application/json
+
+{
+  "name": "bed",
+  "price": 1500
+}
+
+### without REST API delete
+POST http://localhost:9001/delete-product
+content-type: application/json
+
+{
+  "id": 1
+}
+
+### without REST API update
+POST http://localhost:9001/update-product
+content-type: application/json
+
+{
+  "id": 2,
+  "price": 100
+}
+
+
+
+### with REST API
+GET http://localhost:9001/products
+
+### with REST API
+GET http://localhost:9001/products/2
+
+### with REST API 
+POST http://localhost:9001/products
+content-type: application/json
+
+{
+  "name": "bed",
+  "price": 1500
+}
+
+### with REST API delete
+DELETE http://localhost:9001/products/1
+
+### with REST API update
+PATCH http://localhost:9001/products/2
+content-type: application/json
+
+{
+  "price": 800
+}
+
+
+
+### vercel with REST API
+GET http://node-express-vercel-master-ten.vercel.app/products
+
+### vercel with REST API
+GET http://node-express-vercel-master-ten.vercel.app/products/2
+
+### vercel with REST API 
+POST http://node-express-vercel-master-ten.vercel.app/products
+content-type: application/json
+
+{
+  "name": "bed",
+  "price": 1500
+}
+
+### vercel with REST API delete
+DELETE http://node-express-vercel-master-ten.vercel.app/products/1
+
+### vercel with REST API update
+PATCH http://node-express-vercel-master-ten.vercel.app/products/2
+content-type: application/json
+
+{
+  "price": 100
+}
+
+### 08 bookshelf backend
+http://localhost:9002/api/books
+
+###
+http://localhost:9002/api/books/635671e3fc8af6c6c5328c35
+
+###
+POST http://localhost:9002/api/books
+Content-Type: application/json
+
+{
+    "title": "test data",
+    "description": "test description",
+    "comment": "test comment",
+    "rating": 4
+}
+
+### validation error by express-validator
+POST http://localhost:9002/api/books
+Content-Type: application/json
+
+{
+    "title": "",
+    "description": "",
+    "comment": "",
+    "rating": 6
+}
+
+###
+PATCH http://localhost:9002/api/books/6333ed5ec73723402b0796c0
+Content-Type: application/json
+
+{
+    "title": "test data 1",
+    "description": "test description 2",
+    "comment": "test comment 3",
+    "rating": 3
+}
+
+###
+DELETE http://localhost:9002/api/books/635671e3fc8af6c6c5328c35
+
+### vercel 08 bookshelf backend
+https://09-vercel-server.vercel.app//api/books
+
+###
+https://09-vercel-server.vercel.app//api/books/647d520ed4371784856ce6bf
+
+###
+POST https://09-vercel-server.vercel.app//api/books
+Content-Type: application/json
+
+{
+    "title": "test data",
+    "description": "test description",
+    "comment": "test comment",
+    "rating": 4
+}
+
+### validation error by express-validator
+POST https://09-vercel-server.vercel.app//api/books
+Content-Type: application/json
+
+{
+    "title": "",
+    "description": "",
+    "comment": "",
+    "rating": 6
+}
+
+###
+PATCH https://09-vercel-server.vercel.app//api/books/6333ed5ec73723402b0796c0
+Content-Type: application/json
+
+{
+    "title": "test data 1",
+    "description": "test description 2",
+    "comment": "test comment 3",
+    "rating": 3
+}
+
+###
+DELETE https://09-vercel-server.vercel.app//api/books/6490a31375a1aa8666cd7ff9
+
