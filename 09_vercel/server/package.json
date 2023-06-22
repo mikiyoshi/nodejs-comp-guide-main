@@ -1,0 +1,23 @@
+{
+  "name": "vercel-testing",
+  "version": "1.0.0",
+  "description": "node express testing",
+  "main": "./server/index.mjs",
+  "scripts": {
+    "start": "node ./server/index.mjs",
+    "dev:api": "npx nodemon index.mjs",
+    "dev2:api": "node index.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.3",
+    "express": "^4.18.2",
+    "express-validator": "^7.0.1",
+    "mongodb": "^5.6.0",
+    "mongoose": "^7.2.2",
+    "nodemon": "^2.0.22"
+  }
+}
