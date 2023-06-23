@@ -15,7 +15,7 @@ axios.interceptors.response.use(
   }
 );
 
-const ENDPOINT_URL = '/api/books';
+const ENDPOINT_URL = 'https://09-vercel-server.vercel.app/api/books';
 
 const bookApi = {
   async get(id) {
