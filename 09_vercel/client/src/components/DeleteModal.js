@@ -29,15 +29,16 @@ const DeleteModal = ({ book, toggleDeleteModal }) => {
     <div className="modal-container">
       <div className="modal">
         <h3 className="page-title">
-          [{book.title}]<span>を削除しますか</span>
+          <span>Do you want to delete the </span>[{book.title}]
+          {/* <span>を削除しますか</span> */}
         </h3>
         <div className="error-msg text-center">{error}</div>
         <div className="footer">
           <Button className="gray mr-16" onClick={toggleDeleteModal}>
-            キャンセル
+            Cancel
           </Button>
           <Button className="red" onClick={onClickDelete}>
-            削除
+            Delete
           </Button>
         </div>
       </div>

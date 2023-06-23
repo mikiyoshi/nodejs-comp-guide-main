@@ -4,7 +4,12 @@ import { useForm } from 'react-hook-form';
 import { useDispatchBooks } from '../contexts/BookContext';
 import bookApi from '../api/book';
 import Button from '../components/Button';
-import { InputBookTitle, InputBookDesc, InputBookComment, InputBookRating } from '../components/forms';
+import {
+  InputBookTitle,
+  InputBookDesc,
+  InputBookComment,
+  InputBookRating,
+} from '../components/forms';
 
 const EditModal = ({ book, setBook, toggleEditModal }) => {
   const dispatch = useDispatchBooks();
@@ -13,7 +18,8 @@ const EditModal = ({ book, setBook, toggleEditModal }) => {
 
   const clickCancel = () => toggleEditModal();
 
-  const handleChangeRating = (rate) => setEditedBook({ ...editedBook, rating: rate });
+  const handleChangeRating = (rate) =>
+    setEditedBook({ ...editedBook, rating: rate });
 
   const {
     register,
@@ -60,21 +66,24 @@ const EditModal = ({ book, setBook, toggleEditModal }) => {
     <div className="modal-container">
       <form className="modal" onSubmit={handleSubmit(onSubmit)}>
         <h3 className="page-title">
-          [{editedBook.title}]<span>を編集</span>
+          <span>Edit </span>[{editedBook.title}]{/* <span>を編集</span> */}
         </h3>
 
         <InputBookTitle register={register} errors={errors} />
         <InputBookDesc register={register} errors={errors} />
         <InputBookComment register={register} errors={errors} />
-        <InputBookRating rating={editedBook.rating} onChange={handleChangeRating} />
+        <InputBookRating
+          rating={editedBook.rating}
+          onChange={handleChangeRating}
+        />
 
         <div className="error-msg text-center">{error}</div>
 
         <div className="footer">
           <Button className="gray mr-16" onClick={clickCancel}>
-            キャンセル
+            Cancel
           </Button>
-          <Button className="blue">確定する</Button>
+          <Button className="blue">Confirm</Button>
         </div>
       </form>
     </div>

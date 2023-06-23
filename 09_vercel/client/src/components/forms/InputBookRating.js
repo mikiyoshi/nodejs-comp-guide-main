@@ -1,12 +1,13 @@
-import Rating from "react-rating";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faStar } from "@fortawesome/free-solid-svg-icons";
-import { COLORS } from "../../utils/config";
+import Rating from 'react-rating';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { COLORS } from '../../utils/config';
 
 const InputBookRating = ({ rating, onChange }) => {
   return (
     <>
-      <div className="sub-title">本の評価</div>
+      {/* <div className="sub-title">本の評価</div> */}
+      <div className="sub-title">Book Rating</div>
       <div className="form__stars">
         {
           <Rating

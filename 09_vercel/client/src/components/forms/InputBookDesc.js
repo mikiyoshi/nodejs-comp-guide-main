@@ -6,9 +6,11 @@ const InputBookDesc = ({ register, errors }) => {
       </label>
       <textarea
         id="book-desc"
-        placeholder="本の概要"
-        {...register("description", {
-          required: "本の概要を入力してください。",
+        // placeholder="本の概要"
+        placeholder="Book Overview"
+        {...register('description', {
+          // required: "本の概要を入力してください。",
+          required: 'Please enter a summary of the book.',
         })}
       />
       {errors.description && (

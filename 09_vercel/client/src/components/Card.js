@@ -41,12 +41,14 @@ const Card = ({ book }) => {
       </div>
 
       <div>
-        <div className="sub-title">本の概要</div>
+        {/* <div className="sub-title">本の概要</div> */}
+        <div className="sub-title">Book Overview</div>
         <p className="text">{description}</p>
       </div>
 
       <div>
-        <div className="sub-title">本の感想</div>
+        {/* <div className="sub-title">本の感想</div> */}
+        <div className="sub-title">Book Reviews</div>
         <p className="text">{comment}</p>
       </div>
     </Link>

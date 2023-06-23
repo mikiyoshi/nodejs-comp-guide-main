@@ -54,7 +54,8 @@ const Home = () => {
 
   return (
     <div className="small-container">
-      <h2 className="page-title">新規投稿フォーム</h2>
+      {/* <h2 className="page-title">新規投稿フォーム</h2> */}
+      <h2 className="page-title">New Submission Form</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <InputBookTitle register={register} errors={errors} />
         <InputBookDesc register={register} errors={errors} />

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -12,10 +12,12 @@ const Header = () => {
           <nav className="header__nav">
             <ul className="header__ul">
               <li className="header__list">
-                <Link to="/">新規投稿</Link>
+                {/* <Link to="/">新規投稿</Link> */}
+                <Link to="/">New Post</Link>
               </li>
               <li className="header__list">
-                <Link to="/books">一覧ページ</Link>
+                {/* <Link to="/books">一覧ページ</Link> */}
+                <Link to="/books">List page</Link>
               </li>
             </ul>
           </nav>

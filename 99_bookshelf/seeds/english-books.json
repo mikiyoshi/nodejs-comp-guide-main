@@ -1,0 +1,172 @@
+[{
+  "_id": {
+    "$oid": "6334634881d8ae4ba04fbc8e"
+  },
+  "title": "Harry Potter",
+  "description": "J.K. Rowling",
+  "rating": 5,
+  "comment": "Enjoyed it",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664377672489"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665755227492"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633471d481d8ae4ba04fbca9"
+  },
+  "title": "The Da Vinci Code",
+  "description": "Dan Brown",
+  "rating": 3,
+  "comment": "I loved this book and have read it multiple times.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664381396781"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665755323047"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6333ed5ec73723402b0796c0"
+  },
+  "title": "Guess How Much I Love You",
+  "description": "Sam McBratney",
+  "rating": 3,
+  "comment": "Such a cute book and exactly as described.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664347486938"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665746552802"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633548e692df1eddeed375d6"
+  },
+  "title": "The Bad Seed",
+  "description": "Jory John",
+  "rating": 4,
+  "comment": "I read this to my son years ago and he's been trying to be a good seed ever since.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664436454763"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1664863448112"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633bcc28e8223018daf09170"
+  },
+  "title": "The Little Prince",
+  "description": "Antoine de Saint-Exupery",
+  "rating": 5,
+  "comment": "Excellent book, my grandson Love it.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664863272254"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665755281464"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "633bccbde8223018daf0917b"
+  },
+  "title": "Magic Tree House",
+  "description": "Mary Pope Osborne",
+  "rating": 5,
+  "comment": "My kids love the books and they love listening to the adventures of Jack and Annie before going to bed.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1664863421748"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665755269020"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "6348cb2360bfbbb3b24b6ffc"
+  },
+  "title": "Pete the Cat",
+  "description": "Eric Litwin",
+  "rating": 4,
+  "comment": "I read the book at Preschool story time.",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1665714979356"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1665755215615"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "63566ef3c58f15f29410dc90"
+  },
+  "title": "Time for the Vet, Snoopy!",
+  "description": "Charles M. Schulz",
+  "rating": 5,
+  "comment": "My son loves this book would buy other books in series",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666608883435"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666608883435"
+    }
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "635671e3fc8af6c6c5328c35"
+  },
+  "title": "Snoopy Contact!",
+  "description": "Charles M. Schulz",
+  "rating": 5,
+  "comment": "Excellent quality and high page count",
+  "createdAt": {
+    "$date": {
+      "$numberLong": "1666609635450"
+    }
+  },
+  "updatedAt": {
+    "$date": {
+      "$numberLong": "1666609635450"
+    }
+  },
+  "__v": 0
+}]

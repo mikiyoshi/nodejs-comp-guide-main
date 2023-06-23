@@ -10,7 +10,8 @@ axios.interceptors.response.use(
     // Any status codes that falls outside the range of 2xx cause this function to trigger
     // Do something with response error
     return Promise.reject(
-      error.response.data.msg || '時間をおいてお試しください。'
+      // error.response.data.msg || '時間をおいてお試しください。'
+      error.response.data.msg || 'Please try again in a few hours.'
     );
   }
 );
