@@ -65,7 +65,7 @@ const Home = () => {
         <div className="error-msg text-center">{error}</div>
 
         <div className="footer">
-          <Button className="blue">追加する</Button>
+          <Button className="blue">Add</Button>
         </div>
       </form>
     </div>
