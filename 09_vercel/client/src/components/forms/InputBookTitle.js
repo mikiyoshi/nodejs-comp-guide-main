@@ -15,8 +15,8 @@ const InputBookTitle = ({ register, errors }) => {
           required: 'Please enter a title.',
           // maxLength: { value: 10, message: `10文字以内で入力してください。` },
           maxLength: {
-            value: 10,
-            message: `Please enter up to 10 characters.`,
+            value: 40,
+            message: `Please enter up to 40 characters.`,
           },
         })}
       />
