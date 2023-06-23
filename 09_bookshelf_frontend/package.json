@@ -2,7 +2,7 @@
   "name": "09_bookshelf_frontend",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://node-express-vercel-master-ten.vercel.app/",
+  "proxy": "https://node-express-vercel-master-ten.vercel.app",
   "dependencies": {
     "@babel/core": "^7.16.0",
     "@fortawesome/fontawesome-svg-core": "^6.2.0",

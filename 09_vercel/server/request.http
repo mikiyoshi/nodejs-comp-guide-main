@@ -146,7 +146,7 @@ POST https://09-vercel-server.vercel.app//api/books
 Content-Type: application/json
 
 {
-    "title": "test data",
+    "title": "test5 data",
     "description": "test description",
     "comment": "test comment",
     "rating": 4
@@ -168,7 +168,7 @@ PATCH https://09-vercel-server.vercel.app//api/books/6333ed5ec73723402b0796c0
 Content-Type: application/json
 
 {
-    "title": "test data 1",
+    "title": "test9 data 1",
     "description": "test description 2",
     "comment": "test comment 3",
     "rating": 3
