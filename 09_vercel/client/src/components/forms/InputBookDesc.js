@@ -2,7 +2,7 @@ const InputBookDesc = ({ register, errors }) => {
   return (
     <>
       <label className="sub-title" htmlFor="book-desc">
-        本の概要
+        Book Overview
       </label>
       <textarea
         id="book-desc"

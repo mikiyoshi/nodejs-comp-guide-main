@@ -2,7 +2,7 @@ const InputBookComment = ({ register, errors }) => {
   return (
     <>
       <label className="sub-title" htmlFor="book-comment">
-        本の感想
+        Book Reviews
       </label>
       <textarea
         id="book-comment"
