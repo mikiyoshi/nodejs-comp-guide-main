@@ -1,3 +1,19 @@
+# Vercel React clients
+
+[09-vercel-clients](https://09-vercel-clients.vercel.app/)
+
+## Vercel Setting
+
+- `Setting`
+  - `Build & Development Settings`
+    - Build command `npm run build`
+    - Install command `npm install`
+  - `Root Directory` 09_vercel/client
+    - check at `Include source files outside of the Root Directory in the Build Step`
+  - `Node.js Version` 18.x
+- Add server URL [09-vercel-server](https://09-vercel-server.vercel.app/) at api/book.js `ENDPOINT_URL`
+<!-- It's not work `proxy` at package.json, add at `ENDPOINT_URL`  -->
+
 # Vercel Node.js server
 
 [09-vercel-clients](https://09-vercel-clients.vercel.app/)
@@ -46,19 +62,3 @@ app.use(
   })
 );
 ```
-
-# Vercel React clients
-
-[09-vercel-clients](https://09-vercel-clients.vercel.app/)
-
-## Vercel Setting
-
-- `Setting`
-  - `Build & Development Settings`
-    - Build command `npm run build`
-    - Install command `npm install`
-  - `Root Directory` 09_vercel/client
-    - check at `Include source files outside of the Root Directory in the Build Step`
-  - `Node.js Version` 18.x
-- Add server URL [09-vercel-server](https://09-vercel-server.vercel.app/) at api/book.js `ENDPOINT_URL`
-<!-- It's not work `proxy` at package.json, add at `ENDPOINT_URL`  -->
